@@ -1,8 +1,18 @@
 {% extends "pizzas/base.html" %}
 
-{% block content %}
 
+{% block content %}
+{% load static %}
 <p>Pizza: {{ pizza }}</p>
+{% if pizza.id == 1 %}
+<img src="{% static 'pizzas/images/cheesepizza.png' %}">
+{% elif pizza.id == 2 %}
+<img src="{% static 'pizzas/images/pepperonipizza.png' %}">
+{% elif pizza.id == 3 %}
+<img src="{% static 'pizzas/images/meatloverspizza.png' %}">
+{% else %}
+<img src="{% static 'pizzas/images/hawaiianpizza.png' %}">
+{% endif %}
 
 <p>Toppings:</p>
 
