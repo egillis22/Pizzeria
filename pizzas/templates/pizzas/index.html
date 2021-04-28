@@ -1,9 +1,10 @@
 {% extends "pizzas/base.html" %}
 
-{% block content %}
+{% block page_header %}
+<div class="jumbotron">
+    <h1 class="display-3">Welcome to Erica's Pizzeria!</h1>
 
-<p>Pizzeria</p>
-
-<p>Welcome to my Pizzeria! Come look at our large pizza selection.</p>
-
-{% endblock content %}
+    <p>Come explore our selection of homemade pizzas</p>
+    <a class="btn btn-lg btn-primary" href="{% url 'pizzas:pizza' %}" role="button">Pizzas &raquo;</a>
+</div>
+{% endblock page_header %}
